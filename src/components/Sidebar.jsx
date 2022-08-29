@@ -1,11 +1,11 @@
 import React from 'react';
-import { Stack } from '@mui/material';
+import { Box } from '@mui/material';
 import { categories } from '../utils/constants';
 
 const Sidebar = ({selectedCategory, setSelectedCategory}) => (
-  <Stack
-    direction='row'
-    sx={{overflowY: 'auto', height: {xs: 'auto', md: '95%'}, flexDirection: {md: 'column'}}}
+  <Box
+    display='flex'
+    sx={{overflowY: 'auto', height: {xs: 'auto', md: '95%'}, flexDirection: {xs: 'row', md: 'column'}}}
   >
     {categories.map((item) => (
       <button 
@@ -18,7 +18,7 @@ const Sidebar = ({selectedCategory, setSelectedCategory}) => (
         <span style={{opacity: item.name === selectedCategory ? '1' : '0.8'}}>{item.name}</span>
       </button>
     ))}
-  </Stack>
+  </Box>
 )
 
 export default Sidebar

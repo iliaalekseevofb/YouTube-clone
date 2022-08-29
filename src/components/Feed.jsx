@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import { Sidebar, Videos } from './';
 import { fetchFromAPI } from '../utils/fetchFromAPI';
+import CopyrightIcon from '@mui/icons-material/Copyright';
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState('New')
@@ -22,7 +23,7 @@ const Feed = () => {
         <Typography
           className='copyright'
           variant='body2'
-          sx={{mt: 1.5, color: '#fff'}}
+          sx={{mt: 1, color: '#9e9e9e'}}
         >
           Copyright 2022 YouTube-clone
         </Typography>

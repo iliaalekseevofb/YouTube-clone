@@ -1,20 +1,39 @@
 import React from 'react';
-import { Stack } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { logo } from '../utils/constants';
 import SearchBar from './SearchBar';
 
 const Navbar = () => (
-  <Stack 
-    direction='row' 
+  <Stack
+    direction='row'
     alignItems='center'
-    p={2} 
-    sx={{position: 'sticky', background: '#000', top: 0, justifyContent: 'space-between'}}
+    justifyContent='center'
+    sx={{
+      position: 'sticky', 
+      top: 0,
+      width: '100%',
+      height: '10vh',
+    }}
   >
-    <Link to='/' style={{display: 'flex', alignItems: 'center'}}>
-      <img src={logo} alt='logo' height={45} />
-    </Link>
-    <SearchBar />
+    <Box 
+      display='flex' 
+      justifyContent='space-between' 
+      alignItems='center' 
+      sx={{width: '100%', px: 2}}
+    >
+      <Link to='/' style={{display: 'flex', alignItems: 'center'}}>
+        <img src={logo} alt='logo' height={45} />
+        <Typography 
+          variant='h5' 
+          color='white' 
+          sx={{paddingLeft: 1, fontWeight: 700}}
+        >
+          My YouTube clone
+        </Typography>
+      </Link>
+      <SearchBar />
+    </Box>
   </Stack>
 )
 
