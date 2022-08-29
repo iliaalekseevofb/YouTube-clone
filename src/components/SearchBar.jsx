@@ -16,10 +16,19 @@ const SearchBar = () => {
   }
 
   return (
-    <Paper 
+    <Paper
       component='form'
       onSubmit={handleSubmit}
-      sx={{borderRadius: 20, border: '1px solid #e3e3e3', pl: 2, boxShadow: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}
+      sx={{
+        borderRadius: 20, 
+        border: '1px solid #e3e3e3', 
+        pl: 2, boxShadow: 'none', 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        alignItems: 'center',
+        height: '65%',
+        maxHeight: '60px'
+      }}
     >
       <input
         style={{fontSize: 16}}

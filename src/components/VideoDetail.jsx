@@ -23,8 +23,8 @@ const VideoDetail = () => {
   return (
     <Box minHeight='90vh'>
       <Stack direction={{xs: 'column', md: 'row'}}>
-        <Box flex={1}>
-          <Box sx={{width: '100%', position: 'sticky', top: '86px'}}>
+        <Box width={{xs:'100%', md:'75%'}}>
+          <Box sx={{width: '100%', position: 'sticky', mt: 1}}>
             <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} controls className='react-player' />
             <Typography color='#fff' variant='h5' fontWeight='bold' p={2}>
               {title}
@@ -56,8 +56,8 @@ const VideoDetail = () => {
             </Stack>
           </Box>
         </Box>
-        <Box px={2} py={{md: 1, xs: 5}} justifyContent='center' alignItems='center'>
-          <Videos videos={videos} direction='column' />
+        <Box width={{xs:'100%', md:'25%'}} px={{xs: 0, md: 2}} py={{md: 1, xs: 5}} justifyContent='center' alignItems='center'>
+          <Videos videos={videos} detail={12} />
         </Box>
       </Stack>
     </Box>

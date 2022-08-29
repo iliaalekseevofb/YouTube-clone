@@ -23,7 +23,7 @@ const Feed = () => {
         <Typography
           className='copyright'
           variant='body2'
-          sx={{mt: 1, color: '#9e9e9e'}}
+          sx={{mt: 1, color: '#9e9e9e', display: {xs: 'none', md: 'block'}}}
         >
           Copyright 2022 YouTube-clone
         </Typography>
