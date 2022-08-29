@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
-import { Sidebar, Videos } from './';
+import { Sidebar, Videos } from '../components';
 import { fetchFromAPI } from '../utils/fetchFromAPI';
-import CopyrightIcon from '@mui/icons-material/Copyright';
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState('New')
